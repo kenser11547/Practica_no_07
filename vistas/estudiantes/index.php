@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <title>Formulario de Estudiantes</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>FORMULARIO ESTUDIANTES</title>
 </head>
 <body>
-  <div class="container mt-5">
-    <h1>Formulario de Estudiantes</h1>
-    <form>
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="apellido">Apellido:</label>
-        <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" required>
-      </div>
-      <div class="form-group">
-        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" class="form-control" id="fecha_nacimiento" required>
-      </div>
-      <div class="form-group">
-        <label for="telefono">Número de Teléfono:</label>
-        <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono" required>
-      </div>
-      <div class="form-group">
-        <label for="correo">Correo Electrónico:</label>
-        <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <div class="container">
+        <h1 class="text-center">FROMULARIO PARA INGRESAR ESTUDIANTES</h1>
+        <div class="row justify-content-center">
+            <form action="/Practica_no_07/controladores/estudiantes/guardar07.php" method="POST" class="col-lg-8 border bg-light p-3">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="nombre">Nombre del Oficial Alumno</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="apellido">Apellidos</label>
+                        <input type="text" name="apellido" id="apellido" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="numero_telefono">Numero de telefono</label>
+                        <input type="text" name="numero_telefono" id="numero_telefono" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="correo_electronico">Correo electronico</label>
+                        <input type="text" name="correo_electronico" id="correo_electronico" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary w-100">GUARDAR LOS DATOS</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
