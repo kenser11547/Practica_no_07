@@ -1,5 +1,5 @@
 <?php
-require '../../modelos/Producto.php';
+require '../../modelos/estudiantes.php';
 
 try {
     $producto = new Producto($_POST);
@@ -45,7 +45,7 @@ try {
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/crudphp18may2023/vistas/productos/index.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/Practica_no_07/vistas/estudiantes/index.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>

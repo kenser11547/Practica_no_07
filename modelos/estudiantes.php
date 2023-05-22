@@ -2,22 +2,28 @@
 require 'Conexion.php';
 
 class Producto extends Conexion{
-    public $producto_id;
-    public $producto_nombre;
-    public $producto_precio;
-    public $producto_situacion;
+    public $id_estudiante;
+    public $nombre;
+    public $apellido;
+    public $fecha_nacimiento;
+    public $numero_telefono;
+    public $correo_electronico;
+
 
 
     public function __construct($args = [] )
     {
-        $this->producto_id = $args['producto_id'] ?? null;
-        $this->producto_nombre = $args['producto_nombre'] ?? '';
-        $this->producto_precio = $args['producto_precio'] ?? '';
-        $this->producto_situacion = $args['producto_situacion'] ?? '';
+        $this->id_estudiante = $args['id_estudiante'] ?? null;
+        $this->nombre = $args['nombre'] ?? '';
+        $this->apellido = $args['apellido'] ?? '';
+        $this->fecha_nacimiento = $args['fecha_nacimiento'] ?? '';
+        $this->numero_telefono = $args['numero_telefono'] ?? '';
+        $this->correo_electronico = $args['correo_electronico'] ?? '';
+        
     }
 
     public function guardar(){
-        $sql = "INSERT INTO productos(producto_nombre, producto_precio) values('$this->producto_nombre','$this->producto_precio')";
+        $sql = "INSERT INTO productos(nombre, apellido, fecha_nacimiento, numero_telefono, correo_electronico) values('$this->nombre','$this->apellido','$this->fecha_nacimiento','$this->numero_telefono','$this->correo_electronico')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
