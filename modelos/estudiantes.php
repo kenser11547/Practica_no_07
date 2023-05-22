@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php';
+require 'Conexion.php';
 
 class Producto extends Conexion{
     public $id_estudiante;
@@ -23,7 +23,7 @@ class Producto extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO productos(nombre, apellido, fecha_nacimiento, numero_telefono, correo_electronico) values('$this->nombre','$this->apellido','$this->fecha_nacimiento','$this->numero_telefono','$this->correo_electronico')";
+        $sql = "INSERT INTO estudiantes(nombre, apellido, fecha_nacimiento, numero_telefono, correo_electronico) values('$this->nombre','$this->apellido','$this->fecha_nacimiento','$this->numero_telefono','$this->correo_electronico')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
