@@ -9,7 +9,7 @@
     <style>
 
 body {
-    background-image: url(./insumos.jog);
+    background-image: url(./insumos.jpg);
     background-size:cover;
     background-attachment: fixed;
 
